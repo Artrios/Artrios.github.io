@@ -4,16 +4,24 @@
   type: github
   icon: 'fab fa-github'
 -
-  type: twitter
-  icon: 'fab fa-twitter'
+  type: discord
+  icon: 'fab fa-discord'
+  url:  https://discordapp.com/users/722308385793638502
 -
-  type: email
-  icon: 'fas fa-envelope'
-  noblank: true            # open link in current tab
--
-  type: rss
+  type: pokecommunity
   icon: 'fas fa-rss'
-  noblank: true
+  url: https://www.pokecommunity.com/member.php?u=151157
+-
+#  type: twitter
+#  icon: 'fab fa-twitter'
+#-
+#  type: email
+#  icon: 'fas fa-envelope'
+#  noblank: true            # open link in current tab
+#-
+#  type: rss
+#  icon: 'fas fa-rss'
+#  noblank: true
 
 # Uncomment and complete the url below to enable more contact options
 # -

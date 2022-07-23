@@ -1,0 +1,14 @@
+---
+---
+
+/*
+  If the number of TAB files has changed, the following variable is required.
+  And it must be defined before `@import`.
+*/
+$tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
+$link-color: rgb(195, 195, 195);
+
+@import "{{ site.theme }}";
+
+/* append your custom style below */
+$link-color: rgb(195, 195, 195);

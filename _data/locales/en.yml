@@ -6,12 +6,13 @@ layout:
   post: Post
   category: Category
   tag: Tag
+  project: Project
 
 # The tabs of sidebar
 tabs:
   # format: <filename_without_extension>: <value>
   home: Home
-  categories: Categories
+  categories: Projects
   tags: Tags
   archives: Archives
   about: About

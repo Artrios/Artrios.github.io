@@ -1,0 +1,11 @@
+---
+title: Welcome
+date: 2022-07-23
+pin: true
+---
+
+Hey, welcome to my site. I'm a Pokémon Rom Hacker and if you are too you may of seen me around. I go by Paccy on Pokecommunity and Discord but Artrios on GitHub. I only really hack Pokémon Emerald using the disassembly but I'm also working on dissassembled eReader Cards. And of course back in the day I did binary hacking.
+
+I'm not sure how often I'll make posts since I'm quite busy but I'll put up anything that I think is interesting.
+
+In the mean time you can check out my [projects](/projects/) to see what Im working on.
