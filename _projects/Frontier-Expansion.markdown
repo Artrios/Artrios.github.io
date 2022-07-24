@@ -2,7 +2,7 @@
 layout: project
 title: Frontier Expansion
 date: 2022-07-23
-tags: [decomp,hacking]
+tags: [hacking]
 ---
 
 This branch uses the RHH master branch and modifies the Battle Frontier to have up to Gen 6 Pokemon (sorry if you want later gens).

@@ -2,7 +2,6 @@
 layout: project
 title: eCard Information
 date: 2022-07-23
-tags: [ereader]
 ---
 
 This is all what hatschky wrote, not me.
