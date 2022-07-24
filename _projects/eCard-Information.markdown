@@ -2,6 +2,7 @@
 layout: project
 title: eCard Information
 date: 2022-07-23
+tags: [ereader]
 ---
 
 This is all what hatschky wrote, not me.
@@ -116,10 +117,10 @@ $07    4    Pointer to script end
 ```
 The Eon Ticket gives its script to Norman (map 8.1, person event 1), but it can just as easily be assigned to anyone in Hoenn:
 
-![Desktop View](http://i.imgur.com/vyV61jU.png)
-![Desktop View](http://i.imgur.com/TM2bLyz.png)
-![Desktop View](http://i.imgur.com/jqLPvHp.png)
-![Desktop View](http://i.imgur.com/1obUZCK.png)
+![Devices View](/assets/img/ulqgb2rf.png){: .normal }
+![Desktop View](/assets/img/mxgaq1k0.png){: .normal }
+![Desktop View](/assets/img/hah3y2l1.png){: .normal }
+![Desktop View](/assets/img/64gkip0v.png){: .normal }
 
 The `killscript` command ($0D) deletes the script from the save file.
 
@@ -277,7 +278,7 @@ $4C: *SIS AND BRO
 ```
 The classes AQUA ADMIN, MAGMA ADMIN, and WINSTRATE are apparently unavailable, as are the other five Leaders and two Elite Four members. Indices greater than $4C result in mismatches between the trainer class and sprite:
 
-![Desktop View](http://i.imgur.com/7eaWivN.png)
+![Desktop View](/assets/img/wmes7x4m.png)
 
 This value also determines the overworld sprite shown in the Mossdeep house. Any class marked with an asterisk, and any value greater than $4C, will be shown in the overworld as a generic male NPC.
 

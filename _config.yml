@@ -18,6 +18,9 @@ prefer_datetime_locale:
 # Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
 timezone:
 
+plugins:
+  - jekyll-tagories
+
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
@@ -82,7 +85,7 @@ theme_mode:   # [light|dark]
 # will be added to all image (site avatar & posts' images) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-img_cdn:
+img_cdn: 
 
 # the avatar on sidebar, support local or CORS resources
 avatar:
@@ -179,6 +182,7 @@ defaults:
       toc: true
       comments: false    # Enable comments in posts.
       permalink: /projects/:title/
+      archive: true
 
 sass:
   style: compressed
