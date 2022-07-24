@@ -2,9 +2,10 @@
 layout: project
 title: eCard Information
 date: 2022-07-23
+tags: [ereader]
 ---
 
-This is all what hatschky wrote, not me.
+This a post from hatschky from [this archived thread](https://archives.glitchcity.info/forums/board-76/thread-7114/page-0.html).
 
 For a long time, I didnt know anything about the e-Reader other than that it was a short-lived gimmick on Pokémon trading cards. Once I realized that it was basically a Nintendo-approved flash cart that can [install patches in games](http://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Battle_e_Promotional_cards#Berry_Fix_cards), Ive really wanted to find out how it works and how to make my own cards for it.
 

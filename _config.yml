@@ -26,7 +26,7 @@ plugins:
 
 title: Artrios                          # the main title
 
-tagline: Pokemon RomhHacker doing RomHack stuff.   # it will display as the sub-title
+tagline: Pokémon RomHacker doing RomHack stuff.   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   A minimal, responsive, and powerful Jekyll theme for presenting professional writing.
@@ -209,6 +209,8 @@ exclude:
 
 jekyll-archives:
   enabled: [categories, tags]
+  collections: 
+  - projects
   layouts:
     category: category
     tag: tag

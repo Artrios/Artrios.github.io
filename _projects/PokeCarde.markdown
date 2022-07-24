@@ -2,13 +2,14 @@
 layout: project
 title: PokeCarde
 date: 2022-07-23
+tags: [decomp,ereader]
 ---
 
 This is a fork of hatschky's decomp repo.
 
 It is a disassembly of the e-Reader cards released for Pokémon Ruby and Sapphire. Hatschky's repo includes the English release of the Pokémon Battle e series, and the Eon Ticket.
 
-I have added the Japanese version of the cards and translated the Japanese-only cards to English. Additionally, I have made 2 branches. The emerald branch has converted all the cards to work the same on Pokemon Emerald, though you still will need to reactivate Mystery Event functionality in Emerald. The emerald-expansion branch goes even further beyond and is for use with a slightly modified pokeemerald-expansion. These cards allow you to use all the pokemon, items and move from the expansion as well as up to 6 Pokemon for each Trainer card and selecting hidden abilities for Pokemon.
+I have added the Japanese version of the cards and translated the Japanese-only cards to English. Additionally, I have made 2 branches. The emerald branch has converted all the cards to work the same on Pokémon Emerald, though you still will need to reactivate Mystery Event functionality in Emerald. The emerald-expansion branch goes even further beyond and is for use with a slightly modified pokeemerald-expansion. These cards allow you to use all the Pokémon, items and move from the expansion as well as up to 6 Pokémon for each Trainer card and selecting hidden abilities for Pokémon.
 
 RGBDS is needed to compile the Z80 binary for each card. To build a working e-Reader card, you will need to compress the binary and add the card metadata using nedcmake from the nedclib package, which is unfortunately Windows-only.
 
