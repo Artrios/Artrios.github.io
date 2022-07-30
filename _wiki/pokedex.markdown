@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Pokedex
-permalink: /wiki/pokedex
 ---
 
 

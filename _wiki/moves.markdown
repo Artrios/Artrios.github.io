@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Moves
-permalink: /wiki/moves
 ---
 
 
