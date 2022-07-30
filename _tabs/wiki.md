@@ -5,6 +5,6 @@ order: 4
 ---
 
 
-[Pokedex](/wiki/pokedex)
+[Pokedex](/wiki/pokedex/)
 
-[Moves](/wiki/moves)
+[Moves](/wiki/moves/)
