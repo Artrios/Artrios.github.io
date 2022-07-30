@@ -119,6 +119,10 @@ comments:
     issue_term:   # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
+    repo: Artrios/Artrios.github.io             # <gh-username>/<repo>
+    repo_id: R_kgDOHtCD4Q
+    category: General
+    category_id: DIC_kwDOHtCD4c4CQhNX
     mapping:          # optional, default to 'pathname'
     input_position:   # optional, default to 'bottom'
     lang:             # optional, default to the value of `site.lang`
@@ -154,6 +158,8 @@ collections:
     output: true
     sort_by: order
   projects:
+    output: true
+  wiki:
     output: true
 
 defaults:
@@ -194,6 +200,15 @@ defaults:
       comments: true    # Enable comments in posts.
       permalink: /projects/:title/
       archive: true
+  - scope:
+      path: ''
+      type: wiki             # see `site.collections`
+    values:
+      layout: page
+      toc: true
+      comments: false    # Enable comments in posts.
+      permalink: /wiki/:title/
+      archive: false
 
 sass:
   style: compressed
