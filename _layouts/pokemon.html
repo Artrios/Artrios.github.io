@@ -1,0 +1,122 @@
+---
+layout: page
+refactor: true
+pannel_includes:
+  - toc
+---
+
+{% include lang.html %}
+
+
+
+<div class="post-meta text-muted">
+
+{% if page.image.path %}
+  {% capture bg %}
+    {% unless page.image.no_bg %}{{ 'bg' }}{% endunless %}
+  {% endcapture %}
+
+  <div class="mt-3 mb-3">
+    <img src="{{ page.image.path }}" class="preview-img {{ bg | strip }}"
+      alt="{{ page.image.alt | default: "Preview Image" }}"
+
+    {% if page.image.width %}
+      width="{{ page.image.width }}"
+    {% elsif page.image.w %}
+      width="{{ page.image.w }}"
+    {% endif %}
+
+    {% if page.image.height %}
+      height="{{ page.image.height }}"
+    {% elsif page.image.h %}
+      height="{{ page.image.h }}"
+    {% endif %}>
+
+    {% if page.image.alt %}
+      <figcaption class="text-center pt-2 pb-2">{{ page.image.alt }}</figcaption>
+    {% endif %}
+
+  </div>
+{% endif %}
+
+</div> <!-- .post-meta -->
+
+<div class="post-content">
+        <em>{{ site.data.pokedex[page.id]["description"] }}</em>
+</div>
+<div markdown="1">
+  <h2>Summary</h2>
+  <table><thead><tr><th style="text-align: left">Type/s<th style="text-align: left">Category<th style="text-align: left">Abilities<th style="text-align: left">Hidden Ability<th style="text-align: left">Height</th><th style="text-align: right">Weight<tbody>
+    <tr><td style="text-align: left">{{ page.type1 }}{% if page.type1 != page.type2 %} / {{ page.type2 }} {% endif %}<td style="text-align: left">{{ site.data.pokedex[page.id]["categoryName"] | replace: "_", " " }}<td style="text-align: left">{{ page.abilities[0] | replace: "_", " " }}{% if page.abilities[1] != "None" %} / {{ page.abilities[1] | replace: "_", " " }} {% endif %}<td style="text-align: left">{% if page.abilities.size == 3 %}{{ page.abilities[2] | replace: "_", " " }} {% endif %}<td style="text-align: left">{{ site.data.pokedex[page.id]["height"] }}<td style="text-align: right">{{ site.data.pokedex[page.id]["weight"] }}</table>
+
+    <h2>Learnset by Leveling Up</h2>
+    <table><thead><tr><th style="text-align: left">Level<th style="text-align: left">Move<th style="text-align: left">Type<th style="text-align: left">Power<th style="text-align: left">Accuracy</th><th style="text-align: right">PP<tbody>{% for move in site.data.learnsets[page.id].moves %}
+    <tr><td style="text-align: left">{{ move[0] }}<td style="text-align: left">{% assign index = move[1] %}<a href=/wiki/moves/{{ site.data.moves[index].key }}>{{ site.data.moves[index].name }}</a><td style="text-align: left">{{ site.data.moves[index].type }}<td style="text-align: left">{{ site.data.moves[index].power }}<td style="text-align: left">{{ site.data.moves[index].accuracy }}<td style="text-align: right">{{ site.data.moves[index].pp }}{% endfor %}
+    </table>
+    {% if site.data.tmhmlearnsets[page.id].moves.size != 0 %}<h2>Learnset by TM/HM</h2>
+    <table><thead><tr><th style="text-align: left">Item<th style="text-align: left">Move<th style="text-align: left">Type<th style="text-align: left">Power<th style="text-align: left">Accuracy</th><th style="text-align: right">PP<tbody>{% for move in site.data.tmhmlearnsets[page.id].moves %}
+      <tr><td style="text-align: left">{{ move[0] }}<td style="text-align: left">{% assign index = move[1] %}<a href=/wiki/moves/{{ site.data.moves[index].key }}>{{ site.data.moves[index].name }}</a><td style="text-align: left">{{ site.data.moves[index].type }}<td style="text-align: left">{{ site.data.moves[index].power }}<td style="text-align: left">{{ site.data.moves[index].accuracy }}<td style="text-align: right">{{ site.data.moves[index].pp }}{% endfor %}
+      </table>{% endif %}
+    {% if page.egg_id %}<h2>Egg Moves</h2>
+    <table><thead><tr><th style="text-align: left">Move<th style="text-align: left">Type<th style="text-align: left">Power<th style="text-align: left">Accuracy</th><th style="text-align: right">PP<tbody>{% for move in site.data.eggmoves[page.egg_id].egglist %}
+      <tr><td style="text-align: left"><a href=/wiki/moves/{{ site.data.moves[move].key }}>{{ site.data.moves[move].name }}</a><td style="text-align: left">{{ site.data.moves[move].type }}<td style="text-align: left">{{ site.data.moves[move].power }}<td style="text-align: left">{{ site.data.moves[move].accuracy }}<td style="text-align: right">{{ site.data.moves[move].pp }}{% endfor %}
+      </table>{% endif %}
+    <h2>Learnset by Move Tutor</h2>
+    <table><thead><tr><th style="text-align: left">Move<th style="text-align: left">Type<th style="text-align: left">Power<th style="text-align: left">Accuracy</th><th style="text-align: left">PP<tbody>{% for move in page.learnset_tutor %}
+      <tr><td style="text-align: left">{{ move }}<td style="text-align: left">Grass<td style="text-align: left">50<td style="text-align: left">100<td style="text-align: left">25{% endfor %}
+      </table>
+    <h2>Locations Found</h2>
+    <table><thead><tr><th style="text-align: left">Location</th><th style="text-align: left">Time of Day<tbody>{% for location in page.locations %}
+      <tr><td style="text-align: left">{{ location }}<td style="text-align: left">Morning, Day, Evening, Night{% endfor %}
+      </table>
+</div>
+
+
+<div class="post-tail-wrapper text-muted">
+
+    <!-- categories -->
+    {% if page.categories.size > 0 %}
+    <div class="post-meta mb-3">
+      <i class="far fa-folder-open fa-fw mr-1"></i>
+      {% for category in page.categories %}
+        <a href='{{ site.baseurl }}/categories/{{ category | slugify | url_encode }}/'>{{ category }}</a>
+        {%- unless forloop.last -%}, {%- endunless -%}
+      {% endfor %}
+    </div>
+    {% endif %}
+  
+    <!-- tags -->
+    {% if page.tags.size > 0 %}
+    <div class="post-tags">
+      <i class="fa fa-tags fa-fw mr-1"></i>
+        {% for tag in page.tags %}
+        <a href="{{ site.baseurl }}/tags/{{ tag | slugify | url_encode }}/"
+            class="post-tag no-text-decoration" >
+          {{- tag -}}
+        </a>
+        {% endfor %}
+    </div>
+    {% endif %}
+    
+  <div class="post-tail-bottom
+    d-flex justify-content-between align-items-center mt-3 pt-5 pb-2">
+    <div class="license-wrapper">
+
+      {% if site.data.locales[lang].copyright.license.template %}
+
+        {% capture _replacement %}
+        <a href="{{ site.data.locales[lang].copyright.license.link }}">
+          {{ site.data.locales[lang].copyright.license.name }}
+        </a>
+        {% endcapture %}
+
+        {{ site.data.locales[lang].copyright.license.template | replace: ':LICENSE_NAME', _replacement }}
+
+      {% endif %}
+    </div>
+
+    {% include post-sharing.html %}
+
+  </div><!-- .post-tail-bottom -->
+
+</div><!-- div.post-tail-wrapper -->

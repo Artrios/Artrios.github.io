@@ -23,3 +23,4 @@ gem "webrick", "~> 1.7"
 
 # Tags for categories
 gem 'jekyll-tagories', '~> 0.1.0'
+gem 'jekyll-datapage-generator'
